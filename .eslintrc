@@ -3,7 +3,8 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "rules": {
     "comma-dangle": "off",
@@ -14,6 +15,7 @@
     "operator-linebreak": "off",
     "linebreak-style": "off"
   },
+  "plugins": ["jest"],
   "extends": [
     "eslint:recommended", "google"
   ]
