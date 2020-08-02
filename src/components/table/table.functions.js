@@ -24,22 +24,18 @@ export function nextSelector(key, {col, row}) {
   const MIN_VALUE = 0;
   switch (key) {
     case "Enter":
-      row++;
-      break;
     case "ArrowDown":
       row++;
       break;
     case "Tab":
-      col++;
-      break;
     case "ArrowRight":
       col++;
       break;
     case "ArrowLeft":
-      if (col > MIN_VALUE) col--;
+      col = col - 1 < MIN_VALUE ? MIN_VALUE : col - 1;
       break;
     case "ArrowUp":
-      if (row > MIN_VALUE) row--;
+      row = row - 1 < MIN_VALUE ? MIN_VALUE : row - 1;
       break;
   }
 
